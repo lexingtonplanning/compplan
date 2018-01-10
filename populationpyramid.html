@@ -40,11 +40,11 @@ p {
   //Start Bar Chart
         var svg = dimple.newSvg("#BarChart", "100%", "100%");
     d3.csv("https://raw.githubusercontent.com/lexingtonplanning/compplan/gh-pages/Population%20Pyramid.csv", function (data) {
-      dimple.filterData(data, "Year", ["2000", "2010", "2020", "2030", "2035"]);
+      dimple.filterData(data, "Year", ["2000", "2010"]);
           var indicator = new dimple.chart(svg, data);
           var defaultColor = indicator.defaultColors[8];
           var indicatorColor = indicator.defaultColors[0];
-          var frame = 2500;
+          var frame = 3500;
           var firstTick = true;
           indicator.setBounds("75%", "30%", "12%", "40%");
           var y = indicator.addCategoryAxis("y", "Year");
