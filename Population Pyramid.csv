@@ -1,6 +1,6 @@
 Year,Age,Sex,People
-2000,<5,Male,-872
-2000,<5,Female,856
+2000,5<,Male,-872
+2000,5<,Female,856
 2000,10,Male,-1211
 2000,10,Female,1219
 2000,15,Male,-1311
@@ -37,8 +37,8 @@ Year,Age,Sex,People
 2000,85,Female,525
 2000,85+,Male,-238
 2000,85+,Female,714
-2010,<5,Male,-736
-2010,<5,Female,702
+2010,5<,Male,-736
+2010,5<,Female,702
 2010,10,Male,-1187
 2010,10,Female,1155
 2010,15,Male,-1385
