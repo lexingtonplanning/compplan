@@ -4,8 +4,8 @@
 <html>
 <head>
 <title>Lexington Demographics</title>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://dimplejs.org/dist/dimple.v2.1.6.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.1.6/dimple.latest.min.js"></script>
 
 <style>
 body {
@@ -38,7 +38,7 @@ p {
           var indicator = new dimple.chart(svg, data);
           var defaultColor = indicator.defaultColors[8];
           var indicatorColor = indicator.defaultColors[0];
-          var frame = 2500;
+          var frame = 3500;
           var firstTick = true;
           indicator.setBounds("75%", "30%", "12%", "40%");
           var y = indicator.addCategoryAxis("y", "Year");
@@ -95,7 +95,7 @@ p {
           var story = BarChart.setStoryboard("Year", onTick);
           story.frameDuration = frame;
           story.addOrderRule("Date");
-          BarChart.draw(800);
+          BarChart.draw(1500);
 		  window.onresize = function resize () {
     BarChart.draw(0, true);
    };
