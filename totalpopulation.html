@@ -53,7 +53,7 @@ var svgBar = dimple.newSvg("#BarChart", "92%", "95%");
       dimple.filterData(data, "municipality", ["Lexington", "Arlington", "Bedford", "Winchester", "Woburn"]);
 var BarChart = new dimple.chart(svgBar, data);
       BarChart.setBounds("15%", "5%", "65%", "82%");
-      var x = BarChart.addCategoryAxis("x", "year");
+      var x = BarChart.addCategoryAxis("x", ["year", "municipality"]);
       var y = BarChart.addMeasureAxis("y", "population");
 	  y.tickFormat = ',.0f';
 	  y.fontSize = "13px";
