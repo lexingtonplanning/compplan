@@ -63,7 +63,7 @@ var BarChart = new dimple.chart(svgBar, data);
       s.interpolation = "cardinal";
 	  s.lineWeight = 2;
       s.lineMarkers = true;
-	  BarChart.assignColor("Lexington", "red", "red", 1);
+	  BarChart.assignColor(["Lexington", "red", "red", 1], ["Woburn", "blue", "blue", 1]);
 	 
       var BarLegend = BarChart.addLegend ("90%", "10%", "10%", "90%", "right");
 	  BarLegend.fontSize = "12px";
