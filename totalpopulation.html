@@ -49,29 +49,29 @@ body {
     <script type="text/javascript">
 //Start Bar Chart
 var svgBar = dimple.newSvg("#BarChart", "92%", "95%");
-    d3.csv("https://raw.githubusercontent.com/d59gibson/mediansales/gh-pages/Housing%20Price%20Data.csv", function (data) {
-      dimple.filterData(data, "Municipality", ["Lexington", "Natick", "Norwood", "Reading", "Burlington", "Winchester"]);
+    d3.csv("https://raw.githubusercontent.com/lexingtonplanning/compplan/gh-pages/TotalPopulation_00_30.csv", function (data) {
+      dimple.filterData(data, "municipality", ["Lexington", "Arlington", "Bedford", "Winchester", "Woburn"]);
 var BarChart = new dimple.chart(svgBar, data);
       BarChart.setBounds("15%", "5%", "65%", "82%");
-      var x = BarChart.addCategoryAxis("x", "Year");
-      var y = BarChart.addMeasureAxis("y", "Median Sales Price Inflation Adjusted");
+      var x = BarChart.addCategoryAxis("x", "year");
+      var y = BarChart.addMeasureAxis("y", "population");
 	  y.tickFormat = '$,.0f';
 	  y.fontSize = "13px";
 	  x.fontSize = "12px";
-      var s = BarChart.addSeries("Municipality", dimple.plot.line);
-	  s.addOrderRule("Municipality");
+      var s = BarChart.addSeries("municipality", dimple.plot.line);
+	  s.addOrderRule("municipality");
       s.interpolation = "cardinal";
 	  s.lineWeight = 2;
       s.lineMarkers = true;
 	  BarChart.assignColor("Lexington", "red", "red", 1);
       var BarLegend = BarChart.addLegend ("90%", "10%", "10%", "90%", "right");
 	  BarLegend.fontSize = "12px";
-		var BarStoryboard = BarChart.setStoryboard("Municipality");
+		var BarStoryboard = BarChart.setStoryboard("municipality");
 		BarStoryboard.categoryFields = [null];
 		BarChart.draw();
 		BarStoryboard.storyLabel.remove();
         BarChart.legends = [];
-        var filterValues = dimple.getUniqueValues(data, "Municipality");
+        var filterValues = dimple.getUniqueValues(data, "municipality");
         BarLegend.shapes.selectAll("rect")
           .on("click", function (e) {
             var hide = false;
@@ -90,7 +90,7 @@ var BarChart = new dimple.chart(svgBar, data);
               d3.select(this).style("opacity", 0.8);
             }
             filterValues = newFilters;
-            BarChart.data = dimple.filterData(data, "Municipality", filterValues);
+            BarChart.data = dimple.filterData(data, "municipality", filterValues);
             BarChart.draw(800);
           });
 		  window.onresize = function resize () {
