@@ -58,7 +58,7 @@ var BarChart = new dimple.chart(svgBar, data);
 	  y.tickFormat = ',.0f';
 	  y.fontSize = "13px";
 	  x.fontSize = "12px";
-      var s = BarChart.addSeries("municipality", dimple.plot.line);
+      var s = BarChart.addSeries("municipality", dimple.plot.bar);
 	  s.addOrderRule("municipality");
       s.interpolation = "cardinal";
 	  s.lineWeight = 2;
