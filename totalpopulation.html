@@ -55,7 +55,7 @@ var BarChart = new dimple.chart(svgBar, data);
       BarChart.setBounds("15%", "5%", "65%", "82%");
       var x = BarChart.addCategoryAxis("x", "year");
       var y = BarChart.addMeasureAxis("y", "population");
-	  y.tickFormat = '$,.0f';
+	  y.tickFormat = '.0f';
 	  y.fontSize = "13px";
 	  x.fontSize = "12px";
       var s = BarChart.addSeries("municipality", dimple.plot.line);
