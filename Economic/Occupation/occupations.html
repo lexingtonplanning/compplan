@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+		<title>Median Sales Price CPI Adjusted</title>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+		<script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.16.full.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	</head>
+	<style>
+		body {
+		font-family: 'Roboto Condensed', sans-serif;
+		}
+	</style>
+	<body>
+		<script>
+			var data = [
+		{id: "alpha", value: 29, year: 2010},
+		{id: "beta",  value: 10, year: 2010},
+		{id: "gamma", value: 2,  year: 2010},
+		{id: "delta", value: 29, year: 2010},
+		{id: "eta",   value: 25, year: 2010}
+		];
+
+			new d3plus.Treemap()
+				.data(data)
+				.tooltipConfig({
+			body: function(d) {
+			var table = "<table class='tooltip-table'>";
+			table += "<tr><td class='title'>Year:</td><td class='data'>" + d.year + "</td></tr>";
+			table += "<tr><td class='title'>Value:</td><td class='data'>" + d.value + "</td></tr>";
+			table += "</table>";
+			return table;
+			},
+			footer: function(d) {
+			return "<sub class='tooltip-footer'>Data Collected in 2012</sub>";
+			},
+			title: function(d) {
+			var txt = d.id;
+			return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();;
+			}
+			})
+		.render();
+		</script>
+	</body>
+</html>	
+	
