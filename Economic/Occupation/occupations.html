@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html>
 	<head>
-		<title>Median Sales Price CPI Adjusted</title>
+		<title>Employment and Occupations</title>
 		<script src="https://d3js.org/d3.v3.min.js"></script>
 		<script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.16.full.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
@@ -13,14 +13,11 @@
 		}
 	</style>
 	<body>
-		<script>
-			var data = [
-		{id: "alpha", value: 29, year: 2010},
-		{id: "beta",  value: 10, year: 2010},
-		{id: "gamma", value: 2,  year: 2010},
-		{id: "delta", value: 29, year: 2010},
-		{id: "eta",   value: 25, year: 2010}
-		];
+		<script type="text/javascript">
+			var data = d3.tsv("https://raw.githubusercontent.com/lexingtonplanning/compplan/gh-pages/Economic/Occupation/occupation.tsv", function(error, occupation) {
+  if (error) return console.error(error);
+  make_viz(occupation);
+});
 
 			new d3plus.Treemap()
 				.data(data)
