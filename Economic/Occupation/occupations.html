@@ -13,30 +13,34 @@
 		}
 	</style>
 	<body>
-		<script type="text/javascript">
-			var data = d3.tsv("https://raw.githubusercontent.com/lexingtonplanning/compplan/gh-pages/Economic/Occupation/occupation.tsv", function(error, occupation) {
-  if (error) return console.error(error);
-  make_viz(occupation);
-});
+		<script>
+			var data = [
+		{id: "Management", value: 22.1, year: 2016},
+		{id: "Business and Financial Operations",  value: 9.25, year: 2016},
+		{id: "Computer and Mathematical", value: 9.41,  year: 2016},
+		{id: "Architecture and Engineering", value: 4.89, year: 2016},
+		{id: "Life, Physical, and Social Science",   value: 7.55, year: 2016},
+		{id: "Community and Social Services", value: 1.67, year: 2016},
+		];
 
 			new d3plus.Treemap()
-				.data(data)
-				.tooltipConfig({
-			body: function(d) {
-			var table = "<table class='tooltip-table'>";
-			table += "<tr><td class='title'>Year:</td><td class='data'>" + d.year + "</td></tr>";
-			table += "<tr><td class='title'>Value:</td><td class='data'>" + d.value + "</td></tr>";
-			table += "</table>";
-			return table;
-			},
-			footer: function(d) {
-			return "<sub class='tooltip-footer'>Data Collected in 2012</sub>";
-			},
-			title: function(d) {
-			var txt = d.id;
-			return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();;
-			}
-			})
+		.data(data)
+		.tooltipConfig({
+		body: function(d) {
+		var table = "<table class='tooltip-table'>";
+		table += "<tr><td class='title'>Year:</td><td class='data'>" + d.year + "</td></tr>";
+		table += "<tr><td class='title'>Value:</td><td class='data'>" + d.value + "</td></tr>";
+		table += "</table>";
+		return table;
+		},
+		footer: function(d) {
+			return "<sub class='tooltip-footer'>Data Collected in 2016</sub>";
+		},
+		title: function(d) {
+		var txt = d.id;
+		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();;
+		}
+		})
 		.render();
 		</script>
 	</body>

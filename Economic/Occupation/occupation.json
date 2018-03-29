@@ -1,0 +1,308 @@
+[
+ {
+   "FIELD1": "Occupation",
+   "FIELD2": "Share",
+   "FIELD3": "Year",
+   "FIELD4": "Total Employees"
+ },
+ {
+   "FIELD1": "Management",
+   "FIELD2": "22.10%",
+   "FIELD3": "2016",
+   "FIELD4": "3,381"
+ },
+ {
+   "FIELD1": "Business and financial operations",
+   "FIELD2": "9.25%",
+   "FIELD3": "2016",
+   "FIELD4": "1,415"
+ },
+ {
+   "FIELD1": "Computer and mathematical",
+   "FIELD2": "9.41%",
+   "FIELD3": "2016",
+   "FIELD4": "1,440"
+ },
+ {
+   "FIELD1": "Architecture and engineering",
+   "FIELD2": "4.89%",
+   "FIELD3": "2016",
+   "FIELD4": "748"
+ },
+ {
+   "FIELD1": "Life, physical, and social science",
+   "FIELD2": "7.55%",
+   "FIELD3": "2016",
+   "FIELD4": "1,155"
+ },
+ {
+   "FIELD1": "Community and social services",
+   "FIELD2": "1.67%",
+   "FIELD3": "2016",
+   "FIELD4": "255"
+ },
+ {
+   "FIELD1": "Legal",
+   "FIELD2": "2.34%",
+   "FIELD3": "2016",
+   "FIELD4": "358"
+ },
+ {
+   "FIELD1": "Education, training, and library",
+   "FIELD2": "9.09%",
+   "FIELD3": "2016",
+   "FIELD4": "1,391"
+ },
+ {
+   "FIELD1": "Arts and leisure",
+   "FIELD2": "3.35%",
+   "FIELD3": "2016",
+   "FIELD4": "513"
+ },
+ {
+   "FIELD1": "Health practitioners",
+   "FIELD2": "7.34%",
+   "FIELD3": "2016",
+   "FIELD4": "1,123"
+ },
+ {
+   "FIELD1": "Health technicians",
+   "FIELD2": "0.46%",
+   "FIELD3": "2016",
+   "FIELD4": "70"
+ },
+ {
+   "FIELD1": "Healthcare support",
+   "FIELD2": "0.73%",
+   "FIELD3": "2016",
+   "FIELD4": "111"
+ },
+ {
+   "FIELD1": "Fire fighting supervisors",
+   "FIELD2": "1.01%",
+   "FIELD3": "2016",
+   "FIELD4": "155"
+ },
+ {
+   "FIELD1": "Law enforcement supervisors",
+   "FIELD2": "0.38%",
+   "FIELD3": "2016",
+   "FIELD4": "58"
+ },
+ {
+   "FIELD1": "Food and serving",
+   "FIELD2": "2.29%",
+   "FIELD3": "2016",
+   "FIELD4": "350"
+ },
+ {
+   "FIELD1": "Cleaning and maintenance",
+   "FIELD2": "0.98%",
+   "FIELD3": "2016",
+   "FIELD4": "150"
+ },
+ {
+   "FIELD1": "Personal care and service",
+   "FIELD2": "1.99%",
+   "FIELD3": "2016",
+   "FIELD4": "304"
+ },
+ {
+   "FIELD1": "Sales",
+   "FIELD2": "6.37%",
+   "FIELD3": "2016",
+   "FIELD4": "975"
+ },
+ {
+   "FIELD1": "Administrative",
+   "FIELD2": "5.18%",
+   "FIELD3": "2016",
+   "FIELD4": "793"
+ },
+ {
+   "FIELD1": "Farming, fishing, and forestry",
+   "FIELD2": "0.05%",
+   "FIELD3": "2016",
+   "FIELD4": "8"
+ },
+ {
+   "FIELD1": "Construction and extraction",
+   "FIELD2": "0.71%",
+   "FIELD3": "2016",
+   "FIELD4": "109"
+ },
+ {
+   "FIELD1": "Installation, maintenance, and repair",
+   "FIELD2": "0.64%",
+   "FIELD3": "2016",
+   "FIELD4": "98"
+ },
+ {
+   "FIELD1": "Production",
+   "FIELD2": "1.26%",
+   "FIELD3": "2016",
+   "FIELD4": "193"
+ },
+ {
+   "FIELD1": "Transportation",
+   "FIELD2": "0.44%",
+   "FIELD3": "2016",
+   "FIELD4": "67"
+ },
+ {
+   "FIELD1": "Material moving",
+   "FIELD2": "0.51%",
+   "FIELD3": "2016",
+   "FIELD4": "78"
+ },
+ {
+   "FIELD1": "Management",
+   "FIELD2": "22.03%",
+   "FIELD3": "2015",
+   "FIELD4": "3318"
+ },
+ {
+   "FIELD1": "Business and financial operations",
+   "FIELD2": "9.24%",
+   "FIELD3": "2015",
+   "FIELD4": "1392"
+ },
+ {
+   "FIELD1": "Computer and mathematical",
+   "FIELD2": "9.45%",
+   "FIELD3": "2015",
+   "FIELD4": "1423"
+ },
+ {
+   "FIELD1": "Architecture and engineering",
+   "FIELD2": "4.29%",
+   "FIELD3": "2015",
+   "FIELD4": "646"
+ },
+ {
+   "FIELD1": "Life, physical, and social science",
+   "FIELD2": "7.55%",
+   "FIELD3": "2015",
+   "FIELD4": "1137"
+ },
+ {
+   "FIELD1": "Community and social services",
+   "FIELD2": "1.26%",
+   "FIELD3": "2015",
+   "FIELD4": "190"
+ },
+ {
+   "FIELD1": "Legal",
+   "FIELD2": "2.66%",
+   "FIELD3": "2015",
+   "FIELD4": "400"
+ },
+ {
+   "FIELD1": "Education, training, and library",
+   "FIELD2": "9.67%",
+   "FIELD3": "2015",
+   "FIELD4": "1456"
+ },
+ {
+   "FIELD1": "Arts and leisure",
+   "FIELD2": "3.49%",
+   "FIELD3": "2015",
+   "FIELD4": "525"
+ },
+ {
+   "FIELD1": "Health practitioners",
+   "FIELD2": "6.54%",
+   "FIELD3": "2015",
+   "FIELD4": "985"
+ },
+ {
+   "FIELD1": "Health technicians",
+   "FIELD2": "0.43%",
+   "FIELD3": "2015",
+   "FIELD4": "65"
+ },
+ {
+   "FIELD1": "Healthcare support",
+   "FIELD2": "0.78%",
+   "FIELD3": "2015",
+   "FIELD4": "117"
+ },
+ {
+   "FIELD1": "Fire fighting supervisors",
+   "FIELD2": "0.33%",
+   "FIELD3": "2015",
+   "FIELD4": "50"
+ },
+ {
+   "FIELD1": "Law enforcement supervisors",
+   "FIELD2": "1.09%",
+   "FIELD3": "2015",
+   "FIELD4": "164"
+ },
+ {
+   "FIELD1": "Food and serving",
+   "FIELD2": "2.11%",
+   "FIELD3": "2015",
+   "FIELD4": "317"
+ },
+ {
+   "FIELD1": "Cleaning and maintenance",
+   "FIELD2": "0.91%",
+   "FIELD3": "2015",
+   "FIELD4": "137"
+ },
+ {
+   "FIELD1": "Personal care and service",
+   "FIELD2": "2.38%",
+   "FIELD3": "2015",
+   "FIELD4": "359"
+ },
+ {
+   "FIELD1": "Sales",
+   "FIELD2": "6.41%",
+   "FIELD3": "2015",
+   "FIELD4": "965"
+ },
+ {
+   "FIELD1": "Administrative",
+   "FIELD2": "5.18%",
+   "FIELD3": "2015",
+   "FIELD4": "780"
+ },
+ {
+   "FIELD1": "Farming, fishing, and forestry",
+   "FIELD2": "0.07%",
+   "FIELD3": "2015",
+   "FIELD4": "10"
+ },
+ {
+   "FIELD1": "Construction and extraction",
+   "FIELD2": "0.88%",
+   "FIELD3": "2015",
+   "FIELD4": "133"
+ },
+ {
+   "FIELD1": "Installation, maintenance, and repair",
+   "FIELD2": "0.70%",
+   "FIELD3": "2015",
+   "FIELD4": "106"
+ },
+ {
+   "FIELD1": "Production",
+   "FIELD2": "1.73%",
+   "FIELD3": "2015",
+   "FIELD4": "260"
+ },
+ {
+   "FIELD1": "Transportation",
+   "FIELD2": "0.42%",
+   "FIELD3": "2015",
+   "FIELD4": "63"
+ },
+ {
+   "FIELD1": "Material moving",
+   "FIELD2": "0.40%",
+   "FIELD3": "2015",
+   "FIELD4": "60"
+ }
+]
