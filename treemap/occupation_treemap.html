@@ -5,7 +5,15 @@
 		<title>Employment and Occupations</title>
 		<script src="https://d3js.org/d3.v3.min.js"></script>
 		<script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.16.full.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<style>
+		#viz {
+			float: left;
+			top:5px;
+			left:15px;
+			height: 450px;
+			width: 95%;
+		}
+	</style>
 	</head>
 	<style>
 		body {
@@ -13,6 +21,7 @@
 		}
 	</style>
 	<body>
+	<div id="viz"></div>
 		<script>
 			var data = [
 		{id: "Management", value: 22.1, year: 2016},
@@ -21,10 +30,30 @@
 		{id: "Architecture and Engineering", value: 4.89, year: 2016},
 		{id: "Life, Physical, and Social Science",   value: 7.55, year: 2016},
 		{id: "Community and Social Services", value: 1.67, year: 2016},
+		{id: "Legal", value: 2.34, year: 2016},
+		{id: "Education, Training, and Library", value: 9.09, year: 2016},
+		{id: "Arts and Leisure", value: 3.35, year: 2016},
+		{id: "Health Practitioner", value: 7.34, year: 2016},
+		{id: "Health Technicians", value: 0.46, year: 2016},
+		{id: "Healthcare Support", value: 0.73, year: 2016},
+		{id: "Firefighting Supervisors", value: 1.01, year: 2016},
+		{id: "Law Enforcement Supervisors", value: 0.38, year: 2016},
+		{id: "Food and Serving", value: 2.29, year: 2016},
+		{id: "Cleaning and Maintenance", value: 0.98, year: 2016},
+		{id: "Personal Care and Service", value: 1.99, year: 2016},
+		{id: "Sales", value: 6.37, year: 2016},
+		{id: "Administrative", value: 5.18, year: 2016},
+		{id: "Farming, Fishing and Forestry", value: 0.05, year: 2016},
+		{id: "Construction and Extraction", value: 0.71, year: 2016},
+		{id: "Installation, Maintenance and Repair", value: 0.64, year: 2016},
+		{id: "Production", value: 1.26, year: 2016},
+		{id: "Transportation", value: 0.44, year: 2016},
+		{id: "Material Moving", value: 0.51, year: 2016},
 		];
 
 			new d3plus.Treemap()
 		.data(data)
+		.select("#viz")
 		.tooltipConfig({
 		body: function(d) {
 		var table = "<table class='tooltip-table'>";
