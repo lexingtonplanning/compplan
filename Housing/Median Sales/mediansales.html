@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<title>Median Sales Price CPI Adjusted</title>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dimple/2.1.6/dimple.latest.min.js"></script>
+
+<style>
+body {
+    background-color: #E9EFF7;
+}
+#BarChart {    
+    float: left;
+    top:5px;
+    right:8px;
+    width: 100%;
+	height: 450px;
+	background-color: #E9EFF7;
+}
+.textclasshead {
+  float: center;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
+    font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+  text-align: center;
+  color: #545454;
+  }
+  .textclass {
+  float: left;
+  font-family: sans-serif;
+    font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18px;
+  color: #545454;
+  }
+</style>
+</head>
+<body>
+<div class="textclasshead"><strong>Lexington's Median Single Family Home Sale Price 1995 - 2015, Adjusted for Inflation</strong></div><br>
+<div class="textclass">The chart shown here displays the median sale price for Lexington and surrounding communities. Municipalities can be turned off by clicking the legend at the right. Hover over bars for more information about specific municipalities. All data derived from The Warren Group 2016.  </div> 
+<div id="BarChart"></div><br>
+<div class="textclass"; width="100%"; height="150px";><strong>Did You Know?</strong><br>Lexington’s housing circumstances are in some ways very comfortable compared both with other communities and with other periods, but at the same time those circumstances are very challenging by the same comparisons.  The Town has largely exhausted its vacant unprotected land supply (with less than 1,000 acres remaining), so the era of struggling to accommodate 400 or more new dwelling units in a year has gone by.  Both land development and a strong program of land conservation has resulted in striking reduction in the remaining building capacity of the Town.  Added housing now comes relatively slowly, but the demographic change that is transforming the Town is rapid and sharp.  Regional housing market forces have escalated housing prices with resulting rapid demographic change making Lexington a community highly stratified in income, with an older population in smaller households than is common in other communities.  Those socio-economic changes alter the community in ways made more difficult to address as a result of the Town’s now-modest growth potential.<br>This modest growth potential, due to the scarcity of buildable land under current zoning regulations, may contribute to a rise in pricing for new and existing homes in a manner that outpaces the metro-region.</div>
+    <script type="text/javascript">
+//Start Bar Chart
+var svgBar = dimple.newSvg("#BarChart", "92%", "95%");
+    d3.csv("https://raw.githubusercontent.com/d59gibson/mediansales/gh-pages/Housing%20Price%20Data.csv", function (data) {
+      dimple.filterData(data, "Municipality", ["Lexington", "Natick", "Norwood", "Reading", "Burlington", "Winchester"]);
+var BarChart = new dimple.chart(svgBar, data);
+      BarChart.setBounds("15%", "5%", "65%", "82%");
+      var x = BarChart.addCategoryAxis("x", "Year");
+      var y = BarChart.addMeasureAxis("y", "Median Sales Price Inflation Adjusted");
+	  y.tickFormat = '$,.0f';
+	  y.fontSize = "13px";
+	  x.fontSize = "12px";
+      var s = BarChart.addSeries("Municipality", dimple.plot.line);
+	  s.addOrderRule("Municipality");
+      s.interpolation = "cardinal";
+	  s.lineWeight = 2;
+      s.lineMarkers = true;
+	  BarChart.assignColor("Lexington", "red", "red", 1);
+      var BarLegend = BarChart.addLegend ("90%", "10%", "10%", "90%", "right");
+	  BarLegend.fontSize = "12px";
+		var BarStoryboard = BarChart.setStoryboard("Municipality");
+		BarStoryboard.categoryFields = [null];
+		BarChart.draw();
+		BarStoryboard.storyLabel.remove();
+        BarChart.legends = [];
+        var filterValues = dimple.getUniqueValues(data, "Municipality");
+        BarLegend.shapes.selectAll("rect")
+          .on("click", function (e) {
+            var hide = false;
+            var newFilters = [];
+            filterValues.forEach(function (f) {
+              if (f === e.aggField.slice(-1)[0]) {
+                hide = true;
+              } else {
+                newFilters.push(f);
+              }
+            });
+            if (hide) {
+              d3.select(this).style("opacity", 0.2);
+            } else {
+              newFilters.push(e.aggField.slice(-1)[0]);
+              d3.select(this).style("opacity", 0.8);
+            }
+            filterValues = newFilters;
+            BarChart.data = dimple.filterData(data, "Municipality", filterValues);
+            BarChart.draw(800);
+          });
+		  window.onresize = function resize () {
+    BarChart.draw(0, true);
+	BarLegend.draw(0, true);
+   };
+      });
+  </script>
+  </body>
+  </html>
